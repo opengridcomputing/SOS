@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014 Open Grid Computing, Inc. All rights reserved.
+ * Copyright (c) 2014-2016 Open Grid Computing, Inc. All rights reserved.
  *
  * This software is available to you under a choice of one of two
  * licenses.  You may choose to be licensed under the terms of the GNU
@@ -75,7 +75,7 @@ static const char *get_doc(void)
  * +----------------+----------------+
  *
  * The Reference for this key is encoded as follows:
- * 
+ *
  *
  */
 static int blkmap_comparator(ods_key_t a, ods_key_t b)
