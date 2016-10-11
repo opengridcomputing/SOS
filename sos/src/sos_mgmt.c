@@ -1,6 +1,6 @@
 /*
- * Copyright (c) 2014 Open Grid Computing, Inc. All rights reserved.
- * Copyright (c) 2014 Sandia Corporation. All rights reserved.
+ * Copyright (c) 2014-2015 Open Grid Computing, Inc. All rights reserved.
+ * Copyright (c) 2014-2015 Sandia Corporation. All rights reserved.
  * Under the terms of Contract DE-AC04-94AL85000, there is a non-exclusive
  * license for use of this work by or on behalf of the U.S. Government.
  * Export of this program may require a license from the United States
@@ -85,7 +85,7 @@ static void rebuild_fn(ods_t ods, ods_obj_t ods_obj, void *_arg)
 		return;
 
 	sos_obj = ods_obj->as.ptr;
-	schema = sos_schema_by_id(arg->sos, 
+	schema = sos_schema_by_id(arg->sos,
 	sos_obj = __sos_init_obj(arg->sos, schema, ods_obj);
 	if (obj->type != SOS_OBJ_TYPE_OBJ)
 		return; /* skip non SOS object (e.g. attribute) */
