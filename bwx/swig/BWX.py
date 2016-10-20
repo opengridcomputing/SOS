@@ -42,8 +42,8 @@
 
 import time
 import sys
-import sos.sos
-import sos.SOS
+import sosdb.sos
+import sosdb.SOS
 import os
 
 class Iterator(object):
@@ -53,7 +53,7 @@ class Iterator(object):
         self.attr = self.schema.attr(attrName)
 
     def key(self):
-        return sos.SOS.Key(self.attr)
+        return sosdb.SOS.Key(self.attr)
 
     def begin(self):
         return self.attr.iterator().begin()
@@ -74,9 +74,9 @@ class Iterator(object):
         return self.attr.iterator().sup(key)
 
 def set_er_up():
-    sos.SOS.Object.def_fmt = SOS.Object.table_fmt
+    sosdb.SOS.Object.def_fmt = SOS.Object.table_fmt
 
-    container = sos.SOS.Container("/NVME/0/SOS_ROOT/BWX_Job_Data")
+    container = sosdb.SOS.Container("/NVME/0/SOS_ROOT/BWX_Job_Data")
     job_iter = Iterator(container, "Job", "Id")
     sample_iter = Iterator(container, "Sample", "JobTime")
     return (job_iter, sample_iter)
@@ -84,9 +84,9 @@ def set_er_up():
 if __name__ == "__main__":
     import datetime
 
-    sos.SOS.Object.def_fmt = sos.SOS.Object.table_fmt
+    sosdb.SOS.Object.def_fmt = sosdb.SOS.Object.table_fmt
 
-    container = sos.SOS.Container("/NVME/0/SOS_ROOT/BWX_Job_Data")
+    container = sosdb.SOS.Container("/NVME/0/SOS_ROOT/BWX_Job_Data")
     job_iter = Iterator(container, "Job", "Id")
     sample_iter = Iterator(container, "Sample", "JobTime")
     sample_key = sample_iter.key()

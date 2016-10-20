@@ -55,7 +55,7 @@ import matplotlib.dates as mdates
 import matplotlib.cbook as cbook
 import StringIO, Image
 import urllib
-from sos import *
+from sosdb import *
 
 urls = (
     '/table', 'SosTable',
