@@ -8,7 +8,7 @@ AM_CFLAGS = -I$(srcdir)/../include \
 BUILT_SOURCES = sos.c sos.py
 SWIG_SOURCES = sos.i $(srcdir)/../src/sos_priv.h \
 	       $(srcdir)/../include/sos/sos.h
-pkgpythondir="${pythondir}/SOS"
+pkgpythondir="${pythondir}/sosdb"
 pkgpyexecdir="${pkgpythondir}"
 pkgpython_PYTHON = SOS.py __init__.py
 nodist_pkgpython_PYTHON = sos.py

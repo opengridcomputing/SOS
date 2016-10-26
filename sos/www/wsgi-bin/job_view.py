@@ -55,7 +55,7 @@ from matplotlib.figure import Figure
 from matplotlib.ticker import Formatter
 import StringIO, Image
 
-from sos import *
+from sosdb import *
 from bwx import *
 
 urls = (
